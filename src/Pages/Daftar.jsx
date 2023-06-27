@@ -81,6 +81,7 @@ export default function LoginPage() {
         w={'100%'}
         fontSize={'14px'}
         textAlign={'center'}
+        left={'0'}
       >
         Sudah Mempunyai Akun?{' '}
         <Link href={'/login'} fontWeight={'bold'} color={'primary'}>

@@ -27,6 +27,7 @@ export default function LupaKataSandi() {
             navigate('/login');
           }}
           fontSize={'28px'}
+          cursor={'pointer'}
           as={KeyboardArrowLeftOutlinedIcon}
         />
         <Text fontSize={'26px'} fontWeight={'bold'}>
@@ -50,7 +51,7 @@ export default function LupaKataSandi() {
           KIRIM
         </Button>
       </Box>
-      <Text fontSize={'17px'} textAlign={'center'}>
+      <Text mt={'16px'} fontSize={'17px'} textAlign={'center'}>
         Kembali ke{' '}
         <Link href={'/login'} fontWeight={'bold'} color={'primary'}>
           Masuk
@@ -63,6 +64,7 @@ export default function LupaKataSandi() {
         w={'100%'}
         fontSize={'14px'}
         textAlign={'center'}
+        left={'0'}
       >
         Tidak Mempunyai Akun?{' '}
         <Link href={'/daftar'} fontWeight={'bold'} color={'primary'}>

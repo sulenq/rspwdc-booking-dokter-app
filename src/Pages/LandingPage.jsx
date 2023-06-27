@@ -56,7 +56,11 @@ export default function LandingPage() {
     <Box id={'appContainer'}>
       <VStack h={'inherit'} justifyContent={'space-between'}>
         <Box>
-          <Image src={activeCarousel?.src} alt={activeCarousel?.src} />
+          <Image
+            w={'100%'}
+            src={activeCarousel?.src}
+            alt={activeCarousel?.src}
+          />
           <HStack justifyContent={'center'} py={'12px'}>
             <Box
               className={'carouselNav'}

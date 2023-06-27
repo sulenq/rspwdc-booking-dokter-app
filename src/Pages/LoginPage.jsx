@@ -85,6 +85,7 @@ export default function LoginPage() {
       <Text
         position={'fixed'}
         bottom={'32px'}
+        left={'0'}
         w={'100%'}
         fontSize={'14px'}
         textAlign={'center'}
