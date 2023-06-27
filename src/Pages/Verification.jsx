@@ -3,17 +3,15 @@ import { useNavigate } from 'react-router-dom';
 
 import {
   Box,
-  Input,
   Text,
   Link,
   Button,
-  InputGroup,
-  InputLeftElement,
   Icon,
   HStack,
+  PinInput,
+  PinInputField,
 } from '@chakra-ui/react';
 
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
 
 export default function LupaKataSandi() {
@@ -31,30 +29,32 @@ export default function LupaKataSandi() {
           as={KeyboardArrowLeftOutlinedIcon}
         />
         <Text fontSize={'26px'} fontWeight={'bold'}>
-          Lupa Kata Sandi
+          Verifikasi Kode
         </Text>
       </HStack>
 
       <Text textAlign={'center'} mb={'16px'}>
-        Masukan Alamat Email
+        Masukan Kode Verifikasi
       </Text>
       <Box px={'16px'}>
-        <InputGroup>
-          <InputLeftElement mt={'5px'} pointerEvents="none">
-            <Icon opacity={0.3} as={EmailOutlinedIcon} />
-          </InputLeftElement>
-          <Input className={'input'} placeholder="E-mail" />
-        </InputGroup>
+        <HStack gap={'32px'}>
+          <PinInput otp>
+            <PinInputField w={'100%'} h={'70px'} fontSize={'28px'} />
+            <PinInputField w={'100%'} h={'70px'} fontSize={'28px'} />
+            <PinInputField w={'100%'} h={'70px'} fontSize={'28px'} />
+            <PinInputField w={'100%'} h={'70px'} fontSize={'28px'} />
+          </PinInput>
+        </HStack>
       </Box>
       <Box p={'16px'}>
         <Button
           onClick={() => {
-            navigate('/verifikasi');
+            navigate('/gantikatasandi');
           }}
           className={'primaryBtn'}
           w={'100%'}
         >
-          KIRIM
+          VERIFIKASI
         </Button>
       </Box>
       <Text mt={'16px'} fontSize={'17px'} textAlign={'center'}>

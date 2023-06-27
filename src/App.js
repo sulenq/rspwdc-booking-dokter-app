@@ -8,6 +8,8 @@ import LoginPage from './Pages/LoginPage';
 import Daftar from './Pages/Daftar';
 import LupaKataSandi from './Pages/LupaKataSandi';
 import Home from './Pages/Home';
+import Verification from './Pages/Verification.jsx';
+import GantiKataSandi from './Pages/GantiKataSandi.jsx';
 
 import './style.css';
 
@@ -45,6 +47,8 @@ function App() {
           <Route path={'/login'} element={<LoginPage />} />
           <Route path={'/daftar'} element={<Daftar />} />
           <Route path={'/lupakatasandi'} element={<LupaKataSandi />} />
+          <Route path={'/verifikasi'} element={<Verification />} />
+          <Route path={'/gantikatasandi'} element={<GantiKataSandi />} />
           <Route path={'/home'} element={<Home />} />
           <Route path={'*'} element={<NotFound />} />
         </Routes>

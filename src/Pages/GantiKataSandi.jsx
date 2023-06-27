@@ -5,7 +5,7 @@ import {
   Box,
   Input,
   Text,
-  Link,
+  // Link,
   Button,
   InputGroup,
   InputLeftElement,
@@ -13,10 +13,10 @@ import {
   HStack,
 } from '@chakra-ui/react';
 
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
 
-export default function LupaKataSandi() {
+export default function GantiKataSandi() {
   const navigate = useNavigate();
 
   return (
@@ -31,52 +31,46 @@ export default function LupaKataSandi() {
           as={KeyboardArrowLeftOutlinedIcon}
         />
         <Text fontSize={'26px'} fontWeight={'bold'}>
-          Lupa Kata Sandi
+          Ganti Kata Sandi
         </Text>
       </HStack>
 
       <Text textAlign={'center'} mb={'16px'}>
-        Masukan Alamat Email
+        Silahkan masukkan kata sandi baru Anda
       </Text>
       <Box px={'16px'}>
+        <InputGroup mb={'16px'}>
+          <InputLeftElement mt={'5px'} pointerEvents="none">
+            <Icon opacity={0.3} as={LockOutlinedIcon} />
+          </InputLeftElement>
+          <Input
+            className={'input'}
+            type={'password'}
+            placeholder="Kata sandi baru"
+          />
+        </InputGroup>
         <InputGroup>
           <InputLeftElement mt={'5px'} pointerEvents="none">
-            <Icon opacity={0.3} as={EmailOutlinedIcon} />
+            <Icon opacity={0.3} as={LockOutlinedIcon} />
           </InputLeftElement>
-          <Input className={'input'} placeholder="E-mail" />
+          <Input
+            className={'input'}
+            type={'password'}
+            placeholder="Konfirmasi kata sandi"
+          />
         </InputGroup>
       </Box>
       <Box p={'16px'}>
         <Button
           onClick={() => {
-            navigate('/verifikasi');
+            navigate('/login');
           }}
           className={'primaryBtn'}
           w={'100%'}
         >
-          KIRIM
+          GANTI KATA SANDI
         </Button>
       </Box>
-      <Text mt={'16px'} fontSize={'17px'} textAlign={'center'}>
-        Kembali ke{' '}
-        <Link href={'/login'} fontWeight={'bold'} color={'primary'}>
-          Masuk
-        </Link>
-      </Text>
-
-      <Text
-        position={'fixed'}
-        bottom={'32px'}
-        w={'100%'}
-        fontSize={'14px'}
-        textAlign={'center'}
-        left={'0'}
-      >
-        Tidak Mempunyai Akun?{' '}
-        <Link href={'/daftar'} fontWeight={'bold'} color={'primary'}>
-          Daftar Disini
-        </Link>
-      </Text>
     </Box>
   );
 }

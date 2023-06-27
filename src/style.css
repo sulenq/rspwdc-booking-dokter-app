@@ -25,6 +25,7 @@
 .primaryBtn {
   background: var(--primary) !important;
   color: white !important;
+  font-weight: bold !important;
 }
 .primaryBtn:hover {
   background: var(--primary-hover) !important;
