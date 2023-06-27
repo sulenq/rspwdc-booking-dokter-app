@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box !important;
+  font-family: 'Source Sans 3', sans-serif !important;
+  /* border: 1px solid #aaaaaa; */
+}
+:root {
+  --primary-hover: #0e78e1;
+  --primary: #006ad5;
+  --primary-active: #045db7;
+  --gray: #aaaaaa5d;
+}
+#appContainer {
+  height: 100vh;
+  max-width: 640px;
+  justify-content: space-between;
+  position: relative !important;
+}
+.carouselNav {
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  background: var(--gray);
+}
+.primaryBtn {
+  background: var(--primary) !important;
+  color: white !important;
+}
+.primaryBtn:hover {
+  background: var(--primary-hover) !important;
+}
+.primaryBtn:active {
+  background: var(--primary-active) !important;
+}
+.input {
+  height: 50px !important;
+}
+.input:focus-visible {
+  border: 2px solid var(--primary);
+  box-shadow: none !important;
+}
