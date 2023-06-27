@@ -23,6 +23,22 @@ export default function Home() {
     { name: 'Kelas VIP', price: 'Rp. 400.00/malam', src: '4.png' },
     { name: 'ICU', price: 'Rp. 400.00/malam', src: '5.png' },
   ];
+  const majalah = [
+    { text: 'Dampak Self-Diagnose terhadap Kesehatan Mental', src: '1.png' },
+    {
+      text: 'Mengenal Hepatitis Lebih Dekat melalui Hari Hepatitis Sedunia ',
+      src: '2.png',
+    },
+    {
+      text: 'Lindungi Sesama dengan Memperketat Protokol Kesehatan',
+      src: '3.png',
+    },
+    { text: 'Sudah Lengkapkah Imunisasi Sang Buah Hati? ', src: '4.png' },
+    {
+      text: 'Hidup Manis Tanpa Gula. Selamat Hari DIabetes Nasional 2022',
+      src: '5.png',
+    },
+  ];
 
   return (
     <Box id={'appContainer'}>
@@ -79,6 +95,37 @@ export default function Home() {
                   pb={'13px'}
                 >
                   {f?.price}
+                </Text>
+              </Box>
+            );
+          })}
+        </HStack>
+      </Box>
+
+      <Heading fontSize={'22px'} px={'16px'} mb={'12px'}>
+        Majalah Kasih
+      </Heading>
+      <Box overflow={'auto'} mb={'24px'}>
+        <HStack w={'max-content'} px={'16px'} pb={'8px'}>
+          {majalah?.map((f, index) => {
+            return (
+              <Box
+                key={index}
+                w={'240px'}
+                h={'212px'}
+                overflow={'hidden'}
+                boxShadow={'0 0 5px var(--gray)'}
+                borderRadius={'8px'}
+              >
+                <Image key={index} src={`./homeMajalah/${f?.src}`} />
+                <Text
+                  fontSize={'16px'}
+                  fontWeight={'bold'}
+                  textAlign={'center'}
+                  px={'16px'}
+                  py={'13px'}
+                >
+                  {f?.text}
                 </Text>
               </Box>
             );
