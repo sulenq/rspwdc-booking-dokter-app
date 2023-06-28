@@ -62,10 +62,16 @@ export default function Home() {
                 <Box
                   key={index}
                   h={'auto'}
+                  maxW={'640px'}
                   w={window.innerWidth}
                   overflow={'hidden'}
                 >
-                  <Image key={index} src={`./homeFeatured/${f}`} />
+                  <Image
+                    maxW={'640px'}
+                    w={window.innerWidth}
+                    key={index}
+                    src={`./homeFeatured/${f}`}
+                  />
                 </Box>
               );
             })}

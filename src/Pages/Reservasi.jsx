@@ -254,7 +254,7 @@ export default function Reservasi() {
               variant={'ghost'}
               as={KeyboardArrowLeftOutlinedIcon}
             />
-            <ModalBody px={'0'}>
+            <ModalBody px={'0'} maxW={'640px'}>
               <VStack px={'16px'} pt={'64px'} pb={'32px'}>
                 <Image src={'./daftarDokter/' + item?.src} />
                 <Text
@@ -889,7 +889,7 @@ export default function Reservasi() {
             />
           </InputGroup>
         </Box>
-        <Box overflow={'auto'} px={'16px'}>
+        <Box overflow={'auto'} px={'16px'} mb={'16px'}>
           <HStack w={'max-content'}>
             {filterKategori?.map((f, index) => {
               return (
