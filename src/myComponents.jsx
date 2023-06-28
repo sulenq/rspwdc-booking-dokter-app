@@ -22,7 +22,7 @@ const Nav = props => {
       {navItems?.map((n, index) => {
         return (
           <Link key={index} href={n?.link} textDecoration={'none !important'}>
-            <VStack gap={'4px'} p={'4px 24px'} pt={'8px'}>
+            <VStack w={'100px'} gap={'4px'} p={'4px 24px'} pt={'8px'}>
               <Icon
                 className={activeNav === n?.link && 'selectedNav'}
                 fontSize={'28px'}

@@ -65,7 +65,7 @@ export default function Riwayat() {
         <Modal isOpen={isOpen} onClose={onClose} size={'full'}>
           <ModalContent>
             <ModalCloseButton top={'8px'} left={'8px'} />
-            <ModalBody px={'16px'}>
+            <ModalBody px={'16px'} mx={'auto'} w={'100%'} maxW={'640px'}>
               <VStack>
                 <Text
                   fontSize={'26px'}
@@ -157,7 +157,7 @@ export default function Riwayat() {
                 </HStack>
               </VStack>
             </ModalBody>
-            <ModalFooter px={'16px'}>
+            <ModalFooter px={'16px'} mx={'auto'} w={'100%'} maxW={'640px'}>
               <HStack w={'100%'}>
                 <Button w={'50%'} colorScheme={'red'} variant={'outline'}>
                   Batalkan
