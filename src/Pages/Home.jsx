@@ -3,16 +3,17 @@ import React from 'react';
 import {
   Box,
   Text,
-  // Link,
-  // Button,
   Image,
   Icon,
   HStack,
   Avatar,
   Heading,
+  VStack,
 } from '@chakra-ui/react';
 
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+
+import { Nav } from '../myComponents';
 
 export default function Home() {
   const featured = ['1.png', '2.png', '3.png'];
@@ -41,8 +42,9 @@ export default function Home() {
   ];
 
   return (
-    <Box id={'appContainer'}>
-      <HStack p={'16px'} justifyContent={'space-between'}>
+    <VStack id={'appContainer'}>
+      <Nav />
+      <HStack w={'100%'} p={'16px'} justifyContent={'space-between'}>
         <HStack>
           <Avatar />
           <Box>
@@ -52,86 +54,93 @@ export default function Home() {
         </HStack>
         <Icon fontSize={'28px'} as={NotificationsOutlinedIcon} />
       </HStack>
-      <Box overflow={'auto'} mb={'24px'}>
-        <HStack w={'max-content'}>
-          {featured?.map((f, index) => {
-            return (
-              <Box key={index} w={'320px'} overflow={'hidden'}>
-                <Image key={index} src={`./homeFeatured/${f}`} />
-              </Box>
-            );
-          })}
-        </HStack>
-      </Box>
-      <Heading fontSize={'22px'} px={'16px'} mb={'12px'}>
-        Ketersediaan Ruang
-      </Heading>
-      <Box overflow={'auto'} mb={'24px'}>
-        <HStack w={'max-content'} px={'16px'} pb={'8px'}>
-          {ruang?.map((f, index) => {
-            return (
-              <Box
-                key={index}
-                w={'240px'}
-                overflow={'hidden'}
-                boxShadow={'0 0 5px var(--gray)'}
-                borderRadius={'8px'}
-              >
-                <Image key={index} src={`./homeRuang/${f?.src}`} />
-                <Text
-                  fontSize={'16px'}
-                  fontWeight={'bold'}
-                  px={'16px'}
-                  pt={'8px'}
-                  pb={'2px'}
+      <Box w={'100%'} h={'100%'} overflow={'auto'}>
+        <Box overflow={'auto'} mb={'24px'}>
+          <HStack h={'max-content'} w={'max-content'} gap={null}>
+            {featured?.map((f, index) => {
+              return (
+                <Box
+                  key={index}
+                  h={'auto'}
+                  w={window.innerWidth}
+                  overflow={'hidden'}
                 >
-                  {f?.name}
-                </Text>
-                <Text
-                  fontSize={'13px'}
-                  fontWeight={'regular'}
-                  px={'16px'}
-                  pt={'2px'}
-                  pb={'13px'}
+                  <Image key={index} src={`./homeFeatured/${f}`} />
+                </Box>
+              );
+            })}
+          </HStack>
+        </Box>
+        <Heading fontSize={'22px'} px={'16px'} mb={'12px'}>
+          Ketersediaan Ruang
+        </Heading>
+        <Box overflow={'auto'} mb={'24px'}>
+          <HStack w={'max-content'} px={'16px'} pb={'8px'}>
+            {ruang?.map((f, index) => {
+              return (
+                <Box
+                  key={index}
+                  w={'240px'}
+                  overflow={'hidden'}
+                  boxShadow={'0 0 5px var(--gray)'}
+                  borderRadius={'8px'}
                 >
-                  {f?.price}
-                </Text>
-              </Box>
-            );
-          })}
-        </HStack>
-      </Box>
+                  <Image key={index} src={`./homeRuang/${f?.src}`} />
+                  <Text
+                    fontSize={'16px'}
+                    fontWeight={'bold'}
+                    px={'16px'}
+                    pt={'8px'}
+                    pb={'2px'}
+                  >
+                    {f?.name}
+                  </Text>
+                  <Text
+                    fontSize={'13px'}
+                    fontWeight={'regular'}
+                    px={'16px'}
+                    pt={'2px'}
+                    pb={'13px'}
+                  >
+                    {f?.price}
+                  </Text>
+                </Box>
+              );
+            })}
+          </HStack>
+        </Box>
 
-      <Heading fontSize={'22px'} px={'16px'} mb={'12px'}>
-        Majalah Kasih
-      </Heading>
-      <Box overflow={'auto'} mb={'24px'}>
-        <HStack w={'max-content'} px={'16px'} pb={'8px'}>
-          {majalah?.map((f, index) => {
-            return (
-              <Box
-                key={index}
-                w={'240px'}
-                h={'212px'}
-                overflow={'hidden'}
-                boxShadow={'0 0 5px var(--gray)'}
-                borderRadius={'8px'}
-              >
-                <Image key={index} src={`./homeMajalah/${f?.src}`} />
-                <Text
-                  fontSize={'16px'}
-                  fontWeight={'bold'}
-                  textAlign={'center'}
-                  px={'16px'}
-                  py={'13px'}
+        <Heading fontSize={'22px'} px={'16px'} mb={'12px'}>
+          Majalah Kasih
+        </Heading>
+        <Box overflow={'auto'}>
+          <HStack w={'max-content'} px={'16px'} pb={'8px'}>
+            {majalah?.map((f, index) => {
+              return (
+                <Box
+                  key={index}
+                  w={'240px'}
+                  h={'212px'}
+                  overflow={'hidden'}
+                  boxShadow={'0 0 5px var(--gray)'}
+                  borderRadius={'8px'}
                 >
-                  {f?.text}
-                </Text>
-              </Box>
-            );
-          })}
-        </HStack>
+                  <Image key={index} src={`./homeMajalah/${f?.src}`} />
+                  <Text
+                    fontSize={'16px'}
+                    fontWeight={'bold'}
+                    textAlign={'center'}
+                    px={'16px'}
+                    py={'13px'}
+                  >
+                    {f?.text}
+                  </Text>
+                </Box>
+              );
+            })}
+          </HStack>
+        </Box>
       </Box>
-    </Box>
+    </VStack>
   );
 }

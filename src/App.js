@@ -10,6 +10,9 @@ import LupaKataSandi from './Pages/LupaKataSandi';
 import Home from './Pages/Home';
 import Verification from './Pages/Verification.jsx';
 import GantiKataSandi from './Pages/GantiKataSandi.jsx';
+import Reservasi from './Pages/Reservasi.jsx';
+import Riwayat from './Pages/Riwayat.jsx';
+import Pembayaran from './Pages/Pembayaran.jsx';
 
 import './style.css';
 
@@ -50,6 +53,9 @@ function App() {
           <Route path={'/verifikasi'} element={<Verification />} />
           <Route path={'/gantikatasandi'} element={<GantiKataSandi />} />
           <Route path={'/home'} element={<Home />} />
+          <Route path={'/reservasi'} element={<Reservasi />} />
+          <Route path={'/riwayat'} element={<Riwayat />} />
+          <Route path={'/pembayaran'} element={<Pembayaran />} />
           <Route path={'*'} element={<NotFound />} />
         </Routes>
       </ChakraProvider>
