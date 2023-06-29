@@ -16,7 +16,7 @@
 #appContainer {
   height: 100vh;
   margin: 0 auto;
-  max-width: 640px;
+  max-width: 480px;
   align-items: flex-start;
   justify-content: space-between;
   position: relative !important;

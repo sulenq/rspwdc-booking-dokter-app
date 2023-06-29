@@ -255,7 +255,7 @@ export default function Reservasi() {
               d
               as={KeyboardArrowLeftOutlinedIcon}
             />
-            <ModalBody px={'0'} mx={'auto'} w={'100%'} maxW={'640px'}>
+            <ModalBody px={'0'} mx={'auto'} w={'100%'} maxW={'480px'}>
               <VStack px={'16px'} pt={'64px'} pb={'32px'}>
                 <Image src={'./daftarDokter/' + item?.src} />
                 <Text
@@ -351,7 +351,7 @@ export default function Reservasi() {
                 })}
               </VStack>
             </ModalBody>
-            <ModalFooter mx={'auto'} maxW={'640px'} w={'100%'} px={'16px'}>
+            <ModalFooter mx={'auto'} maxW={'480px'} w={'100%'} px={'16px'}>
               <Box w={'100%'}>
                 <Pembayaran checked={checked} item={item} />
               </Box>
@@ -434,7 +434,7 @@ export default function Reservasi() {
               variant={'ghost'}
               as={KeyboardArrowLeftOutlinedIcon}
             />
-            <ModalBody p={'0'} mx={'auto'} w={'100%'} maxW={'640px'}>
+            <ModalBody p={'0'} mx={'auto'} w={'100%'} maxW={'480px'}>
               <HStack p={'10px 16px'} mb={'12px'}>
                 <Text fontSize={'26px'} fontWeight={'800'} ml={'36px'}>
                   Pembayaran
@@ -559,7 +559,7 @@ export default function Reservasi() {
                 </Box>
               </VStack>
             </ModalBody>
-            <ModalFooter p={'0'} mx={'auto'} w={'100%'} maxW={'640px'}>
+            <ModalFooter p={'0'} mx={'auto'} w={'100%'} maxW={'480px'}>
               <Box p={'16px'} w={'100%'}>
                 <DetailPembayaran
                   item={props?.item}
@@ -602,7 +602,7 @@ export default function Reservasi() {
               variant={'ghost'}
               as={KeyboardArrowLeftOutlinedIcon}
             />
-            <ModalBody p={'0'} mx={'auto'} w={'100%'} maxW={'640px'}>
+            <ModalBody p={'0'} mx={'auto'} w={'100%'} maxW={'480px'}>
               <HStack p={'10px 16px'} mb={'12px'}>
                 <Text fontSize={'26px'} fontWeight={'800'} ml={'36px'}>
                   Detail Pembayaran
@@ -727,7 +727,7 @@ export default function Reservasi() {
                 </HStack>
               </VStack>
             </ModalBody>
-            <ModalFooter p={'0'} mx={'auto'} w={'100%'} maxW={'640px'}>
+            <ModalFooter p={'0'} mx={'auto'} w={'100%'} maxW={'480px'}>
               <Box p={'16px'} w={'100%'}>
                 <Bayar />
               </Box>
@@ -798,7 +798,7 @@ export default function Reservasi() {
           size={'full'}
         >
           <ModalContent>
-            <ModalBody p={'0'} mx={'auto'} w={'100%'} maxW={'640px'}>
+            <ModalBody p={'0'} mx={'auto'} w={'100%'} maxW={'480px'}>
               <VStack>
                 <Text
                   fontSize={'26px'}
@@ -850,7 +850,7 @@ export default function Reservasi() {
                 </HStack>
               </VStack>
             </ModalBody>
-            <ModalFooter p={'0'} mx={'auto'} w={'100%'} maxW={'640px'}>
+            <ModalFooter p={'0'} mx={'auto'} w={'100%'} maxW={'480px'}>
               <Box p={'16px'} w={'100%'}>
                 <Button
                   onClick={() => {
@@ -890,7 +890,7 @@ export default function Reservasi() {
             />
           </InputGroup>
         </Box>
-        <Box overflow={'auto'} px={'16px'} mb={'16px'}>
+        <Box overflow={'auto'} px={'16px'}>
           <HStack w={'max-content'}>
             {filterKategori?.map((f, index) => {
               return (
