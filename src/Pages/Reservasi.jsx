@@ -268,6 +268,7 @@ export default function Reservasi() {
                 </Text>
                 <Text mb={'16px'}>{item?.spesialis}</Text>
               </VStack>
+
               <Box>
                 <Text
                   px={'16px'}
@@ -277,6 +278,7 @@ export default function Reservasi() {
                 >
                   Pilih Jadwal Praktek
                 </Text>
+
                 <Box overflow={'auto'} w={'100%'} mb={'8px'}>
                   <HStack px={'16px'} w={'max-content'}>
                     {jadwalPraktek?.map((j, index) => {
@@ -300,6 +302,7 @@ export default function Reservasi() {
                   </HStack>
                 </Box>
               </Box>
+
               <VStack px={'16px'} w={'100%'} gap={'16px'}>
                 {jadwalPraktek[0]?.jadwal?.map((j, index) => {
                   return (
@@ -877,6 +880,7 @@ export default function Reservasi() {
           Daftar Dokter
         </Text>
       </HStack>
+
       <Box h={'100%'} w={'100%'} overflow={'auto'}>
         <Box px={'16px'}>
           <InputGroup mb={'16px'}>
@@ -890,7 +894,8 @@ export default function Reservasi() {
             />
           </InputGroup>
         </Box>
-        <Box overflow={'auto'} px={'16px'}>
+
+        <Box overflow={'auto'} mb={4} px={'16px'}>
           <HStack w={'max-content'}>
             {filterKategori?.map((f, index) => {
               return (
@@ -901,6 +906,7 @@ export default function Reservasi() {
             })}
           </HStack>
         </Box>
+
         <VStack
           gap={'16px'}
           w={'100%'}
