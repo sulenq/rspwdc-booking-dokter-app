@@ -895,8 +895,8 @@ export default function Reservasi() {
           </InputGroup>
         </Box>
 
-        <Box overflow={'auto'} mb={4} px={'16px'}>
-          <HStack w={'max-content'}>
+        <Box overflow={'auto'} w={'100%'} mb={4}>
+          <HStack w={'max-content'} px={'16px'}>
             {filterKategori?.map((f, index) => {
               return (
                 <Box key={index} className={'kategori'}>
