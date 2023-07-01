@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box !important;
   font-family: 'Source Sans 3', sans-serif !important;
+  -webkit-tap-highlight-color: transparent;
   /* border: 1px solid #aaaaaa; */
 }
 ::-webkit-scrollbar {
@@ -13,6 +14,7 @@
   --primary-a: #006ad58c;
   --gray: #9ca2a74c;
 }
+
 #appContainer {
   height: 100vh;
   margin: 0 auto;
