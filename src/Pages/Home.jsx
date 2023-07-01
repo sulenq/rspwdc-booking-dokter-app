@@ -18,10 +18,10 @@ import { Nav } from '../myComponents';
 export default function Home() {
   const featured = ['1.png', '2.png', '3.png'];
   const ruang = [
-    { name: 'Kelas I', price: 'Rp. 400.00/malam', src: '1.png' },
-    { name: 'Kelas II', price: 'Rp. 400.00/malam', src: '2.png' },
-    { name: 'Kelas III', price: 'Rp. 400.00/malam', src: '3.png' },
-    { name: 'Kelas VIP', price: 'Rp. 400.00/malam', src: '4.png' },
+    { name: 'Kelas I', price: 'Rp. 400.000/malam', src: '1.png' },
+    { name: 'Kelas II', price: 'Rp. 400.000/malam', src: '2.png' },
+    { name: 'Kelas III', price: 'Rp. 400.000/malam', src: '3.png' },
+    { name: 'Kelas VIP', price: 'Rp. 400.000/malam', src: '4.png' },
     { name: 'ICU', price: 'Rp. 400.00/malam', src: '5.png' },
   ];
   const majalah = [
