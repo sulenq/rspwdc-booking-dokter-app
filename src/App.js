@@ -15,6 +15,7 @@ import Riwayat from './Pages/Riwayat.jsx';
 import Pembayaran from './Pages/Pembayaran.jsx';
 
 import './style.css';
+import Profile from './Pages/Profile';
 
 const NotFound = () => {
   return (
@@ -56,6 +57,7 @@ function App() {
           <Route path={'/reservasi'} element={<Reservasi />} />
           <Route path={'/riwayat'} element={<Riwayat />} />
           <Route path={'/pembayaran'} element={<Pembayaran />} />
+          <Route path={'/profile-settings'} element={<Profile />} />
           <Route path={'*'} element={<NotFound />} />
         </Routes>
       </ChakraProvider>

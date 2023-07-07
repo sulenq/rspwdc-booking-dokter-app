@@ -12,7 +12,7 @@ const Nav = props => {
     { name: 'Beranda', icon: HomeOutlinedIcon, link: '/home' },
     { name: 'Reservasi', icon: CalendarMonthOutlinedIcon, link: '/reservasi' },
     { name: 'Riwayat', icon: HistoryOutlinedIcon, link: '/riwayat' },
-    { name: 'Profil', icon: PersonOutlinedIcon, link: '' },
+    { name: 'Profil', icon: PersonOutlinedIcon, link: '/profile-settings' },
   ];
   const location = useLocation();
   const activeNav = location.pathname;

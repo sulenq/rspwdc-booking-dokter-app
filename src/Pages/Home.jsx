@@ -54,13 +54,15 @@ export default function Home() {
         </HStack>
         <Icon fontSize={'28px'} as={NotificationsOutlinedIcon} />
       </HStack>
+
       <Box w={'100%'} h={'100%'} overflow={'auto'}>
-        <Box overflow={'auto'} mb={'8px'}>
+        <Box overflow={'auto'} mb={'8px'} scrollSnapType={'x mandatory'}>
           <HStack h={'max-content'} w={'max-content'} gap={null}>
             {featured?.map((f, index) => {
               return (
                 <Box
                   key={index}
+                  scrollSnapAlign={'center'}
                   h={'auto'}
                   maxW={'480px'}
                   w={window.innerWidth}
@@ -77,9 +79,11 @@ export default function Home() {
             })}
           </HStack>
         </Box>
+
         <Heading fontSize={'22px'} px={'16px'} mb={'12px'}>
           Ketersediaan Ruang
         </Heading>
+
         <Box overflow={'auto'}>
           <HStack w={'max-content'} px={'16px'} pb={'8px'}>
             {ruang?.map((f, index) => {
