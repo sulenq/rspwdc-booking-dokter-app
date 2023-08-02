@@ -20,10 +20,14 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 import ContentCopyRoundedIcon from '@mui/icons-material/ContentCopyRounded';
 
 import { Nav } from '../myComponents';
+import { useNavigate } from 'react-router-dom';
 
 export default function Riwayat() {
   const DetailRiwayat = props => {
     const { isOpen, onClose, onOpen } = useDisclosure();
+
+    // Utils
+    const navigate = useNavigate();
 
     return (
       <>
@@ -65,6 +69,7 @@ export default function Riwayat() {
         <Modal isOpen={isOpen} onClose={onClose} size={'full'}>
           <ModalContent>
             <ModalCloseButton top={'8px'} left={'8px'} />
+
             <ModalBody px={'16px'} mx={'auto'} w={'100%'} maxW={'480px'}>
               <VStack>
                 <Text
@@ -157,12 +162,17 @@ export default function Riwayat() {
                 </HStack>
               </VStack>
             </ModalBody>
+
             <ModalFooter px={'16px'} mx={'auto'} w={'100%'} maxW={'480px'}>
               <HStack w={'100%'}>
-                <Button w={'50%'} colorScheme={'red'} variant={'outline'}>
-                  Batalkan
-                </Button>
-                <Button w={'50%'} colorScheme={'blue'} variant={'outline'}>
+                <Button
+                  w={'100%'}
+                  colorScheme={'blue'}
+                  variant={'outline'}
+                  onClick={() => {
+                    navigate('/reservasi');
+                  }}
+                >
                   Ubah Jadwal
                 </Button>
               </HStack>
