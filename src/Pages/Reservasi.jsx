@@ -749,7 +749,7 @@ export default function Reservasi() {
         <Button onClick={onOpen} className={'primaryBtn mainBtn'} w={'100%'}>
           BAYAR
         </Button>
-        
+
         <Modal isOpen={isOpen} isCentered>
           <ModalOverlay />
           <ModalContent mx={'16px'}>
@@ -896,7 +896,7 @@ export default function Reservasi() {
           </InputGroup>
         </Box>
 
-        <Box overflow={'auto'} w={'100%'}>
+        <Box overflow={'auto'} w={'100%'} mb={window.innerWidth < 520 && 2}>
           <HStack w={'max-content'} px={'16px'}>
             {filterKategori?.map((f, index) => {
               return (
